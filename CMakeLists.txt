@@ -61,6 +61,9 @@ target_sources(
 
 target_link_libraries(Interpolate INTERFACE Boost::boost Eigen3::Eigen)
 
+add_executable(my_2d_interp my_2d_interp.cpp)
+target_link_libraries(my_2d_interp Interpolate)
+
 if(${BUILD_TESTS})
   enable_testing()
   add_subdirectory(testing)

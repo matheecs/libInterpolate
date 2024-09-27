@@ -76,7 +76,7 @@ class LinearDelaunayTriangleInterpolator
         }
 
         // do not extrapolate
-        return 0;
+        return std::numeric_limits<Real>::infinity();
     }
 
    protected:
